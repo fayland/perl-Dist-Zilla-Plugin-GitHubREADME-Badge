@@ -19,6 +19,8 @@ has badges => (
 );
 sub mvp_multivalue_args { ('badges') }
 
+has 'place' => ( is => 'rw', isa => 'Str', default => sub { 'top' } );
+
 sub after_build {
     my ($self) = @_;
 
@@ -44,7 +46,12 @@ sub after_build {
         }
     }
 
-    $content = join("\n", @badges) . "\n\n" . $content;
+    if ($self->place eq 'bottom') {
+        $content = $content . "\n\n" . join("\n", @badges);
+    } else {
+        $content = join("\n", @badges) . "\n\n" . $content;
+    }
+
 
     Path::Tiny::path($file)->spew_raw($content);
 }
@@ -68,14 +75,31 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = travis
     badges = coveralls
     badges = gitter
+    place = bottom
 
 =head1 DESCRIPTION
 
 Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
 
+=head1 CONFIG
+
+=head2 badges
+
 Currently only travis, coveralls and gitter are supported. but patches welcome.
 
 default goes to travis and coveralls.
+
+    [GitHubREADME::Badge]
+    badges = travis
+    badges = coveralls
+    badges = gitter
+
+=head2 place
+
+    [GitHubREADME::Badge]
+    place = bottom
+
+top or bottom. default to top
 
 =head1 SEE ALSO
 

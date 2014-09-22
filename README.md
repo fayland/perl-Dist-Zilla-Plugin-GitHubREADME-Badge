@@ -16,14 +16,31 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = travis
     badges = coveralls
     badges = gitter
+    place = bottom
 
 # DESCRIPTION
 
 Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
 
+# CONFIG
+
+## badges
+
 Currently only travis, coveralls and gitter are supported. but patches welcome.
 
 default goes to travis and coveralls.
+
+    [GitHubREADME::Badge]
+    badges = travis
+    badges = coveralls
+    badges = gitter
+
+## place
+
+    [GitHubREADME::Badge]
+    place = bottom
+
+top or bottom. default to top
 
 # SEE ALSO
 
