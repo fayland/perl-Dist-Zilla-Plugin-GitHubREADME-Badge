@@ -2,5 +2,8 @@ Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
 
+0.02  2014-09-22 19:12:02 CST
+        - pass to FAYLAND
+
 0.01  2014-09-22 19:06:46 CST
         - Initial release
