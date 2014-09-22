@@ -5,8 +5,12 @@ use 5.008_005;
 our $VERSION = '0.01';
 
 use Moose;
-with ('Dist::Zilla::Role::FileMunger');
 use namespace::autoclean;
+use Dist::Zilla::File::OnDisk;
+use Path::Tiny;
+
+# same as Dist::Zilla::Plugin::ReadmeAnyFromPod
+with 'Dist::Zilla::Role::AfterBuild';
 
 has badges => (
     is      => 'rw',
@@ -14,23 +18,31 @@ has badges => (
     default => sub { ['travis', 'coveralls'] },
 );
 
-sub munge_file {
+sub after_build {
     my ($self) = @_;
 
-    $self->add_badges($_) for @{ $self->found_files };
-}
+    my $file = $self->zilla->root->file('README.md');
+    my $readme = Dist::Zilla::File::OnDisk->new(name => "$file");
 
-sub add_badges {
-    my ($self, $file) = @_;
+    my $content = $readme->content;
 
-    return unless $file->name =~ /README\.md$/i;
+    my $user_name = 'test';
+    my $repository_name = 'test';
 
-    my $content = $file->content;
+    my @badges;
+    foreach my $badge (@{$self->badges}) {
+        if ($badge eq 'travis') {
+            push @badges, "[![Build Status](https://travis-ci.org/$user_name/$repository_name.svg?branch=master)](https://travis-ci.org/$user_name/$repository_name)";
+        } elsif ($badge eq 'coveralls') {
+            push @badges, "[![Coverage Status](https://coveralls.io/repos/$user_name/$repository_name/badge.png?branch=master)](https://coveralls.io/r/$user_name/$repository_name?branch=master)"
+        } elsif ($badge eq 'gitter') {
+            push @badges, "[![Gitter chat](https://badges.gitter.im/$user_name/$repository_name.png)](https://gitter.im/$user_name/$repository_name)";
+        }
+    }
 
-    my $badges = $self->badges;
+    $content = join("\n", @badges) . "\n\n" . $content;
 
-    use Data::Dumper;
-    print STDERR Dumper(\$badges);
+    Path::Tiny::path($file)->spew_raw($content);
 }
 
 1;

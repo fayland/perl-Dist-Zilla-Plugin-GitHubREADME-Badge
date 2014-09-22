@@ -1,14 +1,23 @@
+[![Build Status](https://travis-ci.org/test/test.svg?branch=master)](https://travis-ci.org/test/test)
+[![Coverage Status](https://coveralls.io/repos/test/test/badge.png?branch=master)](https://coveralls.io/r/test/test?branch=master)
+
 # NAME
 
-Dist::Zilla::GitHubREADME::Badge - Blah blah blah
+Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github README.md
 
 # SYNOPSIS
 
-    use Dist::Zilla::GitHubREADME::Badge;
+    # in dzil.ini
+
+    [GitHubREADME::Badge]
 
 # DESCRIPTION
 
-Dist::Zilla::GitHubREADME::Badge is
+Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
+
+# SEE ALSO
+
+[Minilla](https://metacpan.org/pod/Minilla), [Dist::Zilla::Plugin::TravisCI::StatusBadge](https://metacpan.org/pod/Dist::Zilla::Plugin::TravisCI::StatusBadge)
 
 # AUTHOR
 

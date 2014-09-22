@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "Dist::Zilla - add badges to github README.md",
    "author" : [
       "Fayland Lam <fayland@gmail.com>"
    ],
@@ -26,7 +26,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.038"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "develop" : {
@@ -36,7 +36,7 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008005"
+            "Dist::Zilla" : "0"
          }
       },
       "test" : {
@@ -46,6 +46,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues"
+      },
+      "homepage" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.git",
+         "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge"
+      }
+   },
    "version" : "0.01"
 }
 
