@@ -1,0 +1,7 @@
+/Dist-Zilla-GitHubREADME-Badge-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
+/.prove
