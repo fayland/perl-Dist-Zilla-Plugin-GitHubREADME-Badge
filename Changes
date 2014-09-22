@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+
+0.03  2014-09-22 19:43:33 CST
         - add args place (top or bottom)
 
 0.02  2014-09-22 19:12:02 CST
