@@ -17,6 +17,7 @@ has badges => (
     isa     => 'ArrayRef[Str]',
     default => sub { ['travis', 'coveralls'] },
 );
+sub mvp_multivalue_args { ('badges') }
 
 sub after_build {
     my ($self) = @_;
@@ -60,12 +61,21 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
 =head1 SYNOPSIS
 
     # in dzil.ini
-
     [GitHubREADME::Badge]
+
+    # configure it yourself
+    [GitHubREADME::Badge]
+    badges = travis
+    badges = coveralls
+    badges = gitter
 
 =head1 DESCRIPTION
 
 Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
+
+Currently only travis, coveralls and gitter are supported. but patches welcome.
+
+default goes to travis and coveralls.
 
 =head1 SEE ALSO
 
