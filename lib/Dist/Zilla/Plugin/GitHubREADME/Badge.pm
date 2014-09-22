@@ -52,7 +52,6 @@ sub after_build {
         $content = join("\n", @badges) . "\n\n" . $content;
     }
 
-
     Path::Tiny::path($file)->spew_raw($content);
 }
 
