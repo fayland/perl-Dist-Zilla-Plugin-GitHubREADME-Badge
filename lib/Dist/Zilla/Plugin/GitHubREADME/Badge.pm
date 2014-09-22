@@ -21,13 +21,16 @@ has badges => (
 sub after_build {
     my ($self) = @_;
 
+    my $distmeta = $self->zilla->distmeta;
+    my $repository = $distmeta->{resources}->{repository}->{url};
+    return unless $repository;
+    my ($user_name, $repository_name) = ($repository =~ m{github.com/([^\/]+)/(.*?)(\.git|\/|$)});
+    return unless $repository_name;
+
     my $file = $self->zilla->root->file('README.md');
     my $readme = Dist::Zilla::File::OnDisk->new(name => "$file");
 
     my $content = $readme->content;
-
-    my $user_name = 'test';
-    my $repository_name = 'test';
 
     my @badges;
     foreach my $badge (@{$self->badges}) {

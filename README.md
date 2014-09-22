@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/test/test.svg?branch=master)](https://travis-ci.org/test/test)
-[![Coverage Status](https://coveralls.io/repos/test/test/badge.png?branch=master)](https://coveralls.io/r/test/test?branch=master)
+[![Build Status](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg?branch=master)](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
+[![Coverage Status](https://coveralls.io/repos/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/badge.png?branch=master)](https://coveralls.io/r/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge?branch=master)
 
 # NAME
 
