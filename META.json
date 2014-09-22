@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Dist-Zilla-GitHubREADME-Badge",
+   "name" : "Dist-Zilla-Plugin-GitHubREADME-Badge",
    "no_index" : {
       "directory" : [
          "t",
