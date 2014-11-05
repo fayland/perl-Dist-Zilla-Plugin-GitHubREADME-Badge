@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - search with .md, .mkdn, .markdown (gh#1)
 
 0.03  2014-09-22 19:43:33 CST
         - add args place (top or bottom)

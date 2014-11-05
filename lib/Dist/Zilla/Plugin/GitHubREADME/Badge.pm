@@ -30,7 +30,11 @@ sub after_build {
     my ($user_name, $repository_name) = ($repository =~ m{github.com/([^\/]+)/(.*?)(\.git|\/|$)});
     return unless $repository_name;
 
-    my $file = $self->zilla->root->file('README.md');
+    my $file;
+    foreach my $filename ('README.md', 'README.mkdn', 'README.markdown') {
+        $file = $self->zilla->root->file($filename);
+        last if -e "$file";
+    }
     my $readme = Dist::Zilla::File::OnDisk->new(name => "$file");
 
     my $content = $readme->content;
