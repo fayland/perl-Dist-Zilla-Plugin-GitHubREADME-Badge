@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+
+0.04  2014-11-05 09:26:04 CST
         - search with .md, .mkdn, .markdown (gh#1)
 
 0.03  2014-09-22 19:43:33 CST
