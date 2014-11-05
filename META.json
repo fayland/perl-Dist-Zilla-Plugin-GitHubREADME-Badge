@@ -58,9 +58,6 @@
          "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge"
       }
    },
-   "version" : "0.04",
-   "x_contributors" : [
-      "Fayland Lam <fayland@gmail.com>"
-   ]
+   "version" : "0.05"
 }
 
