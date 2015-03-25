@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - fix for cpants
 
 0.07  2015-03-25 08:34:24 CST
         - add cpants by Nikolay Mishin (mishin)
