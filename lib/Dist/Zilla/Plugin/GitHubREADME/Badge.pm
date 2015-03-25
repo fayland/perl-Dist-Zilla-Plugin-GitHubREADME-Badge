@@ -15,7 +15,7 @@ with 'Dist::Zilla::Role::AfterBuild';
 has badges => (
     is      => 'rw',
     isa     => 'ArrayRef[Str]',
-    default => sub { ['travis', 'coveralls'] },
+    default => sub { ['travis', 'coveralls', 'cpants'] },
 );
 sub mvp_multivalue_args { ('badges') }
 
