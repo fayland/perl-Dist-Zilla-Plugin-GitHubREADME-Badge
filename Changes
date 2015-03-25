@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - add cpants by Nikolay Mishin (mishin)
 
 0.06  2014-11-05 10:00:08 CST
         - for a 'Failed: PAUSE indexer report'
