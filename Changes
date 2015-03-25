@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+
+0.08  2015-03-25 08:40:40 CST
         - fix for cpants
 
 0.07  2015-03-25 08:34:24 CST
