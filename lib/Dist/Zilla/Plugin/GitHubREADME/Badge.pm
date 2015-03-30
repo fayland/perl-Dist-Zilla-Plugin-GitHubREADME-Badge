@@ -49,8 +49,11 @@ sub after_build {
         } elsif ($badge eq 'gitter') {
             push @badges, "[![Gitter chat](https://badges.gitter.im/$user_name/$repository_name.png)](https://gitter.im/$user_name/$repository_name)";
         } elsif ($badge eq 'cpants') {
-            push @badges, "![](http://cpants.cpanauthors.org/dist/$distname.png)";
+            push @badges, "![Kwalitee Status](http://cpants.cpanauthors.org/dist/$distname.png)";
+        } elsif ($badge eq 'version') {
+            push @badges, "[![CPAN version](https://badge.fury.io/pl/$distname.svg)](http://badge.fury.io/pl/$distname)";
         }
+
     }
 
     if ($self->place eq 'bottom') {
