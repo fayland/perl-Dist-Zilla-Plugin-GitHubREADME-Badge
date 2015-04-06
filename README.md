@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg?branch=master)](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Coverage Status](https://coveralls.io/repos/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/badge.png?branch=master)](https://coveralls.io/r/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge?branch=master)
 [![Gitter chat](https://badges.gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.png)](https://gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
-![](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)
+![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)
+[![GitHub issues](https://img.shields.io/github/issues/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues)
 
 # NAME
 
@@ -17,6 +18,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = travis
     badges = coveralls
     badges = gitter
+    badges = cpants
+    badges = issues
     place = bottom
 
 # DESCRIPTION
@@ -27,9 +30,9 @@ Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
 
 ## badges
 
-Currently only travis, coveralls, gitter and cpants are supported. but patches welcome.
+Currently only travis, coveralls, gitter, cpants and GH issues are supported. but patches welcome.
 
-default goes to travis and coveralls.
+default goes to travis, coveralls and cpants.
 
     [GitHubREADME::Badge]
     badges = travis

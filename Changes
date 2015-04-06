@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - update POD
 
 0.09  2015-04-06 16:32:46 CST
         - add cpants to defaults
