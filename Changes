@@ -1,7 +1,10 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+
+0.09  2015-04-06 16:32:46 CST
         - add cpants to defaults
+        - add GitHub issues badge
 
 0.08  2015-03-25 08:40:40 CST
         - fix for cpants

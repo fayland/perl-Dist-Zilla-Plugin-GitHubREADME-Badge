@@ -37,7 +37,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Dist::Zilla" : "0"
+            "Dist::Zilla" : "0",
+            "Path::Tiny" : "0"
          }
       },
       "test" : {
@@ -58,7 +59,7 @@
          "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_contributors" : [
       "Nikolay Mishin <mi@ya.ru>"
    ]
