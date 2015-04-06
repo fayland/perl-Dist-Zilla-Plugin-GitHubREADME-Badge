@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+
+0.10  2015-04-06 16:35:09 CST
         - update POD
 
 0.09  2015-04-06 16:32:46 CST
