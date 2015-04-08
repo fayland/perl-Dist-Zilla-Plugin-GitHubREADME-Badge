@@ -48,7 +48,7 @@ sub after_build {
         } elsif ($badge eq 'gitter') {
             push @badges, "[![Gitter chat](https://badges.gitter.im/$user_name/$repository_name.png)](https://gitter.im/$user_name/$repository_name)";
         } elsif ($badge eq 'cpants') {
-            push @badges, "![Kwalitee status](http://cpants.cpanauthors.org/dist/$repository_name.png)";
+            push @badges, "[![Kwalitee status](http://cpants.cpanauthors.org/dist/$repository_name.png)](http://cpants.charsbar.org/dist/overview/$repository_name)";
         } elsif ($badge eq 'issues') {
             push @badges, "[![GitHub issues](https://img.shields.io/github/issues/$user_name/$repository_name.svg)](https://github.com/$user_name/$repository_name/issues)";
         }
