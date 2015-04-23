@@ -51,6 +51,12 @@ sub after_build {
             push @badges, "[![Kwalitee status](http://cpants.cpanauthors.org/dist/$repository_name.png)](http://cpants.charsbar.org/dist/overview/$repository_name)";
         } elsif ($badge eq 'issues') {
             push @badges, "[![GitHub issues](https://img.shields.io/github/issues/$user_name/$repository_name.svg)](https://github.com/$user_name/$repository_name/issues)";
+        } elsif ($badge eq 'github_tag') {
+            push @badges, "[![GitHub tag](https://img.shields.io/github/tag/$user_name/$repository_name.svg)]()";
+        } elsif ($badge eq 'license') {
+            push @badges, "[![Cpan license](https://img.shields.io/cpan/l/$repository_name.svg)]()";
+        } elsif ($badge eq 'version') {
+            push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$repository_name.svg)]()";
         }
     }
 
