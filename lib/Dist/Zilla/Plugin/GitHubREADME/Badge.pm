@@ -25,6 +25,8 @@ sub after_build {
     my ($self) = @_;
 
     my $distmeta = $self->zilla->distmeta;
+    my $cpan_dist_name=$distmeta->{name};
+    return unless $cpan_dist_name;
     my $repository = $distmeta->{resources}->{repository}->{url};
     return unless $repository;
     my ($user_name, $repository_name) = ($repository =~ m{github.com/([^\/]+)/(.*?)(\.git|\/|$)});
@@ -54,9 +56,9 @@ sub after_build {
         } elsif ($badge eq 'github_tag') {
             push @badges, "[![GitHub tag](https://img.shields.io/github/tag/$user_name/$repository_name.svg)]()";
         } elsif ($badge eq 'license') {
-            push @badges, "[![Cpan license](https://img.shields.io/cpan/l/$repository_name.svg)]()";
+            push @badges, "[![Cpan license](https://img.shields.io/cpan/l/$cpan_dist_name.svg)]()";
         } elsif ($badge eq 'version') {
-            push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$repository_name.svg)]()";
+            push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$cpan_dist_name.svg)]()";
         }
     }
 
