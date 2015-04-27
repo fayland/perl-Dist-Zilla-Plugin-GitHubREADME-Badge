@@ -91,6 +91,9 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = gitter
     badges = cpants
     badges = issues
+    badges = github_tag
+    badges = license
+    badges = version
     place = bottom
 
 =head1 DESCRIPTION
