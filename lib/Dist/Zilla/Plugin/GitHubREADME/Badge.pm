@@ -2,7 +2,7 @@ package Dist::Zilla::Plugin::GitHubREADME::Badge;
 
 use strict;
 use 5.008_005;
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 use Moose;
 use namespace::autoclean;
