@@ -55,9 +55,9 @@ sub after_build {
         } elsif ($badge eq 'github_tag') {
             push @badges, "[![GitHub tag](https://img.shields.io/github/tag/$user_name/$repository_name.svg)]()";
         } elsif ($badge eq 'license') {
-            push @badges, "[![Cpan license](https://img.shields.io/cpan/l/$distname.svg)]()";
+            push @badges, "[![Cpan license](https://img.shields.io/cpan/l/$distname.svg)](https://metacpan.org/release/$distname)";
         } elsif ($badge eq 'version') {
-            push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$distname.svg)]()";
+            push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$distname.svg)](https://metacpan.org/release/$distname)";
         }
     }
 
