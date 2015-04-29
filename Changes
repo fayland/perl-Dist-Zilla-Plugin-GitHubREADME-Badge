@@ -2,6 +2,9 @@ Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
 
+0.14  2015-04-29 18:04:04 CST
+        - small url fixes from Mishin
+
 0.13  2015-04-27 09:17:02 CST
         - no code changes
 

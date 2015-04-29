@@ -3,9 +3,6 @@
 [![Gitter chat](https://badges.gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.png)](https://gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![GitHub issues](https://img.shields.io/github/issues/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues)
-[![GitHub tag](https://img.shields.io/github/tag/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
-[![Cpan license](https://img.shields.io/cpan/l/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
-[![Cpan version](https://img.shields.io/cpan/v/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
 
 # NAME
 
