@@ -81,7 +81,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
 
 =head1 SYNOPSIS
 
-    # in dzil.ini
+    # in dist.ini
     [GitHubREADME::Badge]
 
     # configure it yourself
