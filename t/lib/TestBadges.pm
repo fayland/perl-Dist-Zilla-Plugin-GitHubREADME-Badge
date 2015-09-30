@@ -1,0 +1,92 @@
+use strict;
+use warnings;
+
+package # no_index
+  TestBadges;
+
+use Test::More;
+use Test::DZil;
+use Path::Tiny qw( path tempdir );
+
+use Exporter;
+our @ISA = qw(Exporter);
+our @EXPORT = (@Test::More::EXPORT, qw(
+  badge_patterns
+  build_dist
+));
+
+sub badge_patterns {
+  my ($user, $repo) = @_;
+  my $ur = qr{\Q$user/$repo\E};
+  return {
+    travis     => qr{//travis-ci.org/$ur\.},
+    coveralls  => qr{//coveralls.io/repos/$ur/badge\.},
+    gitter     => qr{//badges.gitter.im/$ur\.},
+    cpants     => qr{//cpants.cpanauthors.org/dist/\Q$repo\E\.},
+    issues     => qr{//img.shields.io/github/issues/$ur\.},
+    github_tag => qr{//img.shields.io/github/tag/$ur\.},
+    license    => qr{//img.shields.io/cpan/l/$repo\.},
+    version    => qr{//img.shields.io/cpan/v/$repo\.},
+  };
+}
+
+sub build_dist {
+  my $config = shift || {};
+  my $test   = {
+    content => 'ReadMe, please',
+    name    => 'README.mkdn',
+    user    => 'test-author',
+    repo    => 'test-badges',
+    %{ shift() || {} },
+  };
+
+  my $plugin_name = 'GitHubREADME::Badge';
+  my $dir = tempdir();
+
+  my @plugins = (
+    # Bare minimum instead of @Basic.
+    qw(
+      GatherDir
+      License
+      FakeRelease
+    ),
+    # Fill in resources so we can discover repo info.
+    [
+      MetaResources => {
+        'repository.url' => "http://github.com/$test->{user}/$test->{repo}",
+      }
+    ],
+    [$plugin_name => $config],
+  );
+
+  my $tzil = Builder->from_config(
+    {
+      dist_root => $dir,
+    },
+    {
+      add_files => {
+        'source/dist.ini' => simple_ini({ name => $test->{repo} }, @plugins),
+        'source/lib/Foo.pm' => "package Foo;\n\$VERSION = 1;\n",
+        "source/$test->{name}" =>  $test->{content},
+      }
+    }
+  );
+
+  $tzil->build;
+
+  # Get the readme in dzil's source dir.
+  my ($readme) = map { path($_) }
+    grep { $_->basename eq $test->{name} }
+      $tzil->root->children;
+
+  # Return several values and shortcuts to simplify testing.
+  return {
+    zilla  => $tzil,
+    readme => $readme,
+    plugin => $tzil->plugin_named($plugin_name),
+    user   => $test->{user},
+    repo   => $test->{repo},
+  };
+}
+
+1;
