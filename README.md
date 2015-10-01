@@ -3,6 +3,9 @@
 [![Gitter chat](https://badges.gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.png)](https://gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![GitHub issues](https://img.shields.io/github/issues/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues)
+[![GitHub tag](https://img.shields.io/github/tag/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
+[![Cpan license](https://img.shields.io/cpan/l/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
+[![Cpan version](https://img.shields.io/cpan/v/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
 
 # NAME
 
@@ -10,7 +13,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
 
 # SYNOPSIS
 
-    # in dzil.ini
+    # in dist.ini
     [GitHubREADME::Badge]
 
     # configure it yourself
@@ -24,6 +27,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     place = bottom
+    phase = release
 
 # DESCRIPTION
 
@@ -49,6 +53,14 @@ default goes to travis, coveralls and cpants.
     place = bottom
 
 top or bottom. default to top
+
+## phase
+
+    [GitHubREADME::Badge]
+    phase = release
+
+Which Dist::Zilla phase to add the badges: build or release.
+The default is build.
 
 # SEE ALSO
 
