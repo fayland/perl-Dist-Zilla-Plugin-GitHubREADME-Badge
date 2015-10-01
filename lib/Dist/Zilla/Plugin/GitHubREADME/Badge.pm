@@ -5,12 +5,16 @@ use 5.008_005;
 our $VERSION = '0.14';
 
 use Moose;
+use Moose::Util::TypeConstraints qw(enum);
 use namespace::autoclean;
 use Dist::Zilla::File::OnDisk;
 use Path::Tiny;
 
 # same as Dist::Zilla::Plugin::ReadmeAnyFromPod
-with 'Dist::Zilla::Role::AfterBuild';
+with qw(
+  Dist::Zilla::Role::AfterBuild
+  Dist::Zilla::Role::AfterRelease
+);
 
 has badges => (
     is      => 'rw',
@@ -21,7 +25,23 @@ sub mvp_multivalue_args { ('badges') }
 
 has 'place' => ( is => 'rw', isa => 'Str', default => sub { 'top' } );
 
+has phase => (
+    is      => 'ro',
+    isa     => enum([qw(build release)]),
+    default => 'build',
+);
+
 sub after_build {
+    my ($self) = @_;
+    $self->add_badges if $self->phase eq 'build';
+}
+
+sub after_release {
+    my ($self) = @_;
+    $self->add_badges if $self->phase eq 'release';
+}
+
+sub add_badges {
     my ($self) = @_;
 
     my $distname = $self->zilla->name;
@@ -36,9 +56,13 @@ sub after_build {
         $file = $self->zilla->root->file($filename);
         last if -e "$file";
     }
-    my $readme = Dist::Zilla::File::OnDisk->new(name => "$file");
+    $self->log_fatal('README file not found') if ! -e "$file";
 
-    my $content = $readme->content;
+    my $readme = Path::Tiny::path($file);
+
+    # We are lazy and dealing with only encoded bytes.
+    # If we need to decode we could probably get the encoding from the zilla file object (if Dist::Zilla->VERSION >= 5).
+    my $content = $readme->slurp_raw;
 
     my @badges;
     foreach my $badge (@{$self->badges}) {
@@ -67,7 +91,7 @@ sub after_build {
         $content = join("\n", @badges) . "\n\n" . $content;
     }
 
-    Path::Tiny::path($file)->spew_raw($content);
+    $readme->spew_raw($content);
 }
 
 1;
@@ -81,7 +105,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
 
 =head1 SYNOPSIS
 
-    # in dzil.ini
+    # in dist.ini
     [GitHubREADME::Badge]
 
     # configure it yourself
@@ -95,6 +119,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     place = bottom
+    phase = release
 
 =head1 DESCRIPTION
 
@@ -120,6 +145,14 @@ default goes to travis, coveralls and cpants.
     place = bottom
 
 top or bottom. default to top
+
+=head2 phase
+
+    [GitHubREADME::Badge]
+    phase = release
+
+Which Dist::Zilla phase to add the badges: build or release.
+The default is build.
 
 =head1 SEE ALSO
 

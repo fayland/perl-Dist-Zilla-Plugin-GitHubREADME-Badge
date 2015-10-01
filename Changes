@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - add 'phase' attribute to enable after-release instead of after-build
+        - add tests and small bug fixes
 
 0.14  2015-04-29 18:04:04 CST
         - small url fixes from Mishin
