@@ -36,9 +36,12 @@ sub after_build {
         $file = $self->zilla->root->file($filename);
         last if -e "$file";
     }
-    my $readme = Dist::Zilla::File::OnDisk->new(name => "$file");
 
-    my $content = $readme->content;
+    my $readme = Path::Tiny::path($file);
+
+    # We are lazy and dealing with only encoded bytes.
+    # If we need to decode we could probably get the encoding from the zilla file object (if Dist::Zilla->VERSION >= 5).
+    my $content = $readme->slurp_raw;
 
     my @badges;
     foreach my $badge (@{$self->badges}) {
@@ -67,7 +70,7 @@ sub after_build {
         $content = join("\n", @badges) . "\n\n" . $content;
     }
 
-    Path::Tiny::path($file)->spew_raw($content);
+    $readme->spew_raw($content);
 }
 
 1;
