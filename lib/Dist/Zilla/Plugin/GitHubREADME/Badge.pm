@@ -36,6 +36,7 @@ sub after_build {
         $file = $self->zilla->root->file($filename);
         last if -e "$file";
     }
+    $self->log_fatal('README file not found') if ! -e "$file";
 
     my $readme = Path::Tiny::path($file);
 
