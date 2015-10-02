@@ -69,7 +69,7 @@ sub add_badges {
         if ($badge eq 'travis') {
             push @badges, "[![Build Status](https://travis-ci.org/$user_name/$repository_name.svg?branch=master)](https://travis-ci.org/$user_name/$repository_name)";
         } elsif ($badge eq 'coveralls') {
-            push @badges, "[![Coverage Status](https://coveralls.io/repos/$user_name/$repository_name/badge.png?branch=master)](https://coveralls.io/r/$user_name/$repository_name?branch=master)"
+            push @badges, "[![Coverage Status](https://coveralls.io/repos/$user_name/$repository_name/badge.svg?branch=master)](https://coveralls.io/r/$user_name/$repository_name?branch=master)"
         } elsif ($badge eq 'gitter') {
             push @badges, "[![Gitter chat](https://badges.gitter.im/$user_name/$repository_name.png)](https://gitter.im/$user_name/$repository_name)";
         } elsif ($badge eq 'cpants') {
