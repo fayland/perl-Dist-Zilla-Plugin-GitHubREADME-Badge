@@ -59,7 +59,7 @@
          "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge"
       }
    },
-   "version" : "0.15",
+   "version" : "0.16",
    "x_contributors" : [
       "Nikolay Mishin <mi@ya.ru>",
       "Randy Stauner <randy@magnificent-tears.com>"
