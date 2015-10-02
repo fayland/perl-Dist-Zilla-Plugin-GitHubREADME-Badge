@@ -22,7 +22,7 @@ sub badge_patterns {
   return {
     travis     => qr{//travis-ci.org/$ur\.},
     coveralls  => qr{//coveralls.io/repos/$ur/badge\.},
-    gitter     => qr{//badges.gitter.im/$ur\.},
+    gitter     => qr{//gitter\.im/$ur\b},
     cpants     => qr{//cpants.cpanauthors.org/dist/\Q$repo\E\.},
     issues     => qr{//img.shields.io/github/issues/$ur\.},
     github_tag => qr{//img.shields.io/github/tag/$ur\.},
