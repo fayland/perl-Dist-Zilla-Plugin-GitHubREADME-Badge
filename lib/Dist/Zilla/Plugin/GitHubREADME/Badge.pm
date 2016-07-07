@@ -53,12 +53,12 @@ sub add_badges {
 
     my $file;
     foreach my $filename ('README.md', 'README.mkdn', 'README.markdown') {
-        $file = $self->zilla->root->file($filename);
+        $file = $self->zilla->root->path($filename);
         last if -e "$file";
     }
     $self->log_fatal('README file not found') if ! -e "$file";
 
-    my $readme = Path::Tiny::path($file);
+    my $readme = $file;
 
     # We are lazy and dealing with only encoded bytes.
     # If we need to decode we could probably get the encoding from the zilla file object (if Dist::Zilla->VERSION >= 5).
