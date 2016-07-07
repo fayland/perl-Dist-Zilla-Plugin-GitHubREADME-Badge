@@ -120,6 +120,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = github_tag
     badges = license
     badges = version
+    badges = codecov
     place = bottom
     phase = release
 
@@ -131,7 +132,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge is to add badges in github README.md
 
 =head2 badges
 
-Currently only travis, coveralls, gitter, cpants and GH issues are supported. but patches welcome.
+Currently only travis, coveralls, codecov, gitter, cpants and GH issues are supported. but patches welcome.
 
 default goes to travis, coveralls and cpants.
 

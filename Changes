@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - add codecov
 
 0.16  2015-10-02 11:44:52 CST
         - use svg for coveralls and gitter.im (Randy Stauner)
