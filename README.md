@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg?branch=master)](https://travis-ci.org/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Coverage Status](https://coveralls.io/repos/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/badge.svg?branch=master)](https://coveralls.io/r/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge?branch=master)
+[![codecov](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/branch/master/graph/badge.svg)](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![GitHub issues](https://img.shields.io/github/issues/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues)
 [![GitHub tag](https://img.shields.io/github/tag/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
 [![Cpan license](https://img.shields.io/cpan/l/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Cpan version](https://img.shields.io/cpan/v/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
-[![codecov](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/branch/master/graph/badge.svg)](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 
 # NAME
 
