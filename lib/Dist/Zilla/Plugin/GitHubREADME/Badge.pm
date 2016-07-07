@@ -2,7 +2,7 @@ package Dist::Zilla::Plugin::GitHubREADME::Badge;
 
 use strict;
 use 5.008_005;
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 use Moose;
 use Moose::Util::TypeConstraints qw(enum);
