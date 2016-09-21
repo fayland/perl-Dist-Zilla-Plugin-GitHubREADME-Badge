@@ -84,6 +84,8 @@ sub add_badges {
             push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$distname.svg)](https://metacpan.org/release/$distname)";
         } elsif ($badge eq 'codecov') {
             push @badges, "[![codecov](https://codecov.io/gh/$user_name/$repository_name/branch/master/graph/badge.svg)](https://codecov.io/gh/$user_name/$repository_name)";
+        } elsif ($badge eq 'gitlab_ci') {
+            push @badges, "[![build status](https://$repository/$user_name/$repository_name/badges/master/build.svg)](https://$repository/$user_name/$repository_name/commits/master)";
         }
     }
 
