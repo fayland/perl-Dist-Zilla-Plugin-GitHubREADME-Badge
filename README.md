@@ -28,6 +28,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     badges = codecov
+    badges = gitlab_ci
+    badges = gitlab_cover
     place = bottom
     phase = release
 
