@@ -40,4 +40,14 @@ test_badges
   },
   'non default badges';
 
+test_badges
+  {
+    badges => [qw(
+	gitlab_ci
+	gitlab_cover
+    )],
+  },
+  'non default badges';
+
+
 done_testing;
