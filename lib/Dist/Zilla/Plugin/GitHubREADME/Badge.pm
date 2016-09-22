@@ -9,7 +9,6 @@ use Moose::Util::TypeConstraints qw(enum);
 use namespace::autoclean;
 use Dist::Zilla::File::OnDisk;
 use Path::Tiny;
-use Data::Dumper;
 
 # same as Dist::Zilla::Plugin::ReadmeAnyFromPod
 with qw(
