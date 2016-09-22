@@ -48,12 +48,12 @@ sub add_badges {
     my $distmeta = $self->zilla->distmeta;
     my $repository = $distmeta->{resources}->{repository}->{url};
     return unless $repository;
-    my ($user_name, $repository_name) = ($repository =~ m{github.com/([^\/]+)/(.*?)(\.git|\/|$)});
+    my ($base_url, $user_name, $repository_name) = ($repository =~ m{^\w+://(.*)/([^\/]+)/(.*?)(\.git|\/|$)});
     return unless $repository_name;
 
     my $file;
     foreach my $filename ('README.md', 'README.mkdn', 'README.markdown') {
-        $file = $self->zilla->root->path($filename);
+        $file = path($self->zilla->root)->child($filename);
         last if -e "$file";
     }
     $self->log_fatal('README file not found') if ! -e "$file";
@@ -84,7 +84,13 @@ sub add_badges {
             push @badges, "[![Cpan version](https://img.shields.io/cpan/v/$distname.svg)](https://metacpan.org/release/$distname)";
         } elsif ($badge eq 'codecov') {
             push @badges, "[![codecov](https://codecov.io/gh/$user_name/$repository_name/branch/master/graph/badge.svg)](https://codecov.io/gh/$user_name/$repository_name)";
+        } elsif ($badge eq 'gitlab_ci') {
+            push @badges, "[![build status](https://$base_url/$user_name/$repository_name/badges/master/build.svg)]($repository/$user_name/$repository_name/commits/master)";
+        } elsif ($badge eq 'gitlab_cover') {
+            push @badges, "[![coverage report](https://$base_url/$user_name/$repository_name/badges/master/coverage.svg)]($repository/$user_name/$repository_name/commits/master)";
         }
+		
+		
     }
 
     if ($self->place eq 'bottom') {
@@ -121,6 +127,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     badges = codecov
+    badges = gitlab_ci
+    badges = gitlab_cover
     place = bottom
     phase = release
 
