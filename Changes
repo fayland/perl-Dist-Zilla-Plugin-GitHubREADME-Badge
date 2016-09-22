@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - gitlab support (Thorsten Klein)
 
 0.17  2016-07-07 15:09:08 CST
         - add codecov
