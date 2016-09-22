@@ -53,7 +53,7 @@ sub add_badges {
 
     my $file;
     foreach my $filename ('README.md', 'README.mkdn', 'README.markdown') {
-	$file = path($self->zilla->root)->child($filename);
+        $file = path($self->zilla->root)->child($filename);
         last if -e "$file";
     }
     $self->log_fatal('README file not found') if ! -e "$file";
@@ -127,8 +127,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     badges = codecov
-	badges = gitlab_ci
-	badges = gitlab_cover
+    badges = gitlab_ci
+    badges = gitlab_cover
     place = bottom
     phase = release
 
