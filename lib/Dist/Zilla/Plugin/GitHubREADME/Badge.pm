@@ -53,7 +53,7 @@ sub add_badges {
 
     my $file;
     foreach my $filename ('README.md', 'README.mkdn', 'README.markdown') {
-        $file = $self->zilla->root->path($filename);
+	$file = path($self->zilla->root)->child($filename);
         last if -e "$file";
     }
     $self->log_fatal('README file not found') if ! -e "$file";
