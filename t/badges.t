@@ -47,7 +47,7 @@ test_badges
 	gitlab_cover
     )],
   },
-  'non default badges';
+  'gitlab badges';
 
 
 done_testing;
