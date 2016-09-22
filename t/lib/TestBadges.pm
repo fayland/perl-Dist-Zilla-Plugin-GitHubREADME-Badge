@@ -20,14 +20,16 @@ sub badge_patterns {
   my ($user, $repo) = @_;
   my $ur = qr{\Q$user/$repo\E};
   return {
-    travis     => qr{//travis-ci.org/$ur\.},
-    coveralls  => qr{//coveralls.io/repos/$ur/badge\.},
-    gitter     => qr{//gitter\.im/$ur\b},
-    cpants     => qr{//cpants.cpanauthors.org/dist/\Q$repo\E\.},
-    issues     => qr{//img.shields.io/github/issues/$ur\.},
-    github_tag => qr{//img.shields.io/github/tag/$ur\.},
-    license    => qr{//img.shields.io/cpan/l/$repo\.},
-    version    => qr{//img.shields.io/cpan/v/$repo\.},
+    travis       => qr{//travis-ci.org/$ur\.},
+    coveralls    => qr{//coveralls.io/repos/$ur/badge\.},
+    gitter       => qr{//gitter\.im/$ur\b},
+    cpants       => qr{//cpants.cpanauthors.org/dist/\Q$repo\E\.},
+    issues       => qr{//img.shields.io/github/issues/$ur\.},
+    github_tag   => qr{//img.shields.io/github/tag/$ur\.},
+    license      => qr{//img.shields.io/cpan/l/$repo\.},
+    version      => qr{//img.shields.io/cpan/v/$repo\.},
+    gitlab_ci    => qr{//github.com/$ur/badges/master/build.svg},
+    gitlab_cover => qr{//github.com/$ur/badges/master/coverage.svg}
   };
 }
 

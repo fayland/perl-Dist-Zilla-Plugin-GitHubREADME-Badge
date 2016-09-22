@@ -9,6 +9,7 @@ use Moose::Util::TypeConstraints qw(enum);
 use namespace::autoclean;
 use Dist::Zilla::File::OnDisk;
 use Path::Tiny;
+use Data::Dumper;
 
 # same as Dist::Zilla::Plugin::ReadmeAnyFromPod
 with qw(
@@ -48,7 +49,7 @@ sub add_badges {
     my $distmeta = $self->zilla->distmeta;
     my $repository = $distmeta->{resources}->{repository}->{url};
     return unless $repository;
-    my ($user_name, $repository_name) = ($repository =~ m{github.com/([^\/]+)/(.*?)(\.git|\/|$)});
+    my ($base_url, $user_name, $repository_name) = ($repository =~ m{^\w+://(.*)/([^\/]+)/(.*?)(\.git|\/|$)});
     return unless $repository_name;
 
     my $file;
@@ -85,8 +86,12 @@ sub add_badges {
         } elsif ($badge eq 'codecov') {
             push @badges, "[![codecov](https://codecov.io/gh/$user_name/$repository_name/branch/master/graph/badge.svg)](https://codecov.io/gh/$user_name/$repository_name)";
         } elsif ($badge eq 'gitlab_ci') {
-            push @badges, "[![build status](https://$repository/$user_name/$repository_name/badges/master/build.svg)](https://$repository/$user_name/$repository_name/commits/master)";
+            push @badges, "[![build status](https://$base_url/$user_name/$repository_name/badges/master/build.svg)]($repository/$user_name/$repository_name/commits/master)";
+        } elsif ($badge eq 'gitlab_cover') {
+            push @badges, "[![coverage report](https://$base_url/$user_name/$repository_name/badges/master/coverage.svg)]($repository/$user_name/$repository_name/commits/master)";
         }
+		
+		
     }
 
     if ($self->place eq 'bottom') {
@@ -123,6 +128,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = license
     badges = version
     badges = codecov
+	badges = gitlab_ci
+	badges = gitlab_cover
     place = bottom
     phase = release
 
