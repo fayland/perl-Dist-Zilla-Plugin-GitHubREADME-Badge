@@ -20,7 +20,8 @@ my %WriteMakefileArgs = (
     "Path::Tiny" => 0
   },
   "TEST_REQUIRES" => {
-    "Test::More" => "0.96"
+    "Test::More" => "0.96",
+    "Test::Pod" => 0
   },
   "VERSION" => "0.18",
   "test" => {
@@ -32,7 +33,8 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Dist::Zilla" => 0,
   "Path::Tiny" => 0,
-  "Test::More" => "0.96"
+  "Test::More" => "0.96",
+  "Test::Pod" => 0
 );
 
 
