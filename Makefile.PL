@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+use 5.001400;
 
 use ExtUtils::MakeMaker;
 
@@ -14,6 +14,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Dist-Zilla-Plugin-GitHubREADME-Badge",
   "LICENSE" => "perl",
+  "MIN_PERL_VERSION" => "5.001400",
   "NAME" => "Dist::Zilla::Plugin::GitHubREADME::Badge",
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
