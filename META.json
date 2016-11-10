@@ -64,9 +64,10 @@
          "web" : "https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge"
       }
    },
-   "version" : "0.19",
+   "version" : "0.20",
    "x_contributors" : [
       "Nikolay Mishin <mi@ya.ru>",
+      "Paul Cochrane <paul@liekut.de>",
       "Randy Stauner <randy@magnificent-tears.com>",
       "Thorsten Klein <grobie@perlwizard.de>",
       "Thorsten Klein <thorsten@kleinhq.org>"

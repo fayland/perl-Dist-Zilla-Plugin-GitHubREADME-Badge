@@ -2,6 +2,9 @@ Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
 
+0.20  2016-11-10 16:00:06 CST
+        - dummy, didn't do git pull
+
 0.19  2016-11-10 15:56:49 CST
         - many improvements from paultcochrane (Paul Cochrane)
 
