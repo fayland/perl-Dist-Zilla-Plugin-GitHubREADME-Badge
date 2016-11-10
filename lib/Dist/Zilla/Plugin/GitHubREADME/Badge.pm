@@ -89,8 +89,6 @@ sub add_badges {
         } elsif ($badge eq 'gitlab_cover') {
             push @badges, "[![coverage report](https://$base_url/$user_name/$repository_name/badges/master/coverage.svg)]($repository/$user_name/$repository_name/commits/master)";
         }
-		
-		
     }
 
     if ($self->place eq 'bottom') {
