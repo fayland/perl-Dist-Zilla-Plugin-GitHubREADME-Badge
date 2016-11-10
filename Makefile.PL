@@ -25,7 +25,8 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "Test::More" => "0.96",
-    "Test::Pod" => 0
+    "Test::Pod" => 0,
+    "warnings" => 0
   },
   "VERSION" => "0.20",
   "test" => {
@@ -41,7 +42,8 @@ my %FallbackPrereqs = (
   "Path::Tiny" => 0,
   "Test::More" => "0.96",
   "Test::Pod" => 0,
-  "namespace::autoclean" => 0
+  "namespace::autoclean" => 0,
+  "warnings" => 0
 );
 
 
