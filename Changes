@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - many improvements from paultcochrane (Paul Cochrane)
 
 0.18  2016-09-22 19:17:28 CST
         - gitlab support (Thorsten Klein)
