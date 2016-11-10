@@ -18,7 +18,10 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::Plugin::GitHubREADME::Badge",
   "PREREQ_PM" => {
     "Dist::Zilla" => 0,
-    "Path::Tiny" => 0
+    "Moose" => 0,
+    "Moose::Util::TypeConstraints" => 0,
+    "Path::Tiny" => 0,
+    "namespace::autoclean" => 0
   },
   "TEST_REQUIRES" => {
     "Test::More" => "0.96",
@@ -33,9 +36,12 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Dist::Zilla" => 0,
+  "Moose" => 0,
+  "Moose::Util::TypeConstraints" => 0,
   "Path::Tiny" => 0,
   "Test::More" => "0.96",
-  "Test::Pod" => 0
+  "Test::Pod" => 0,
+  "namespace::autoclean" => 0
 );
 
 
