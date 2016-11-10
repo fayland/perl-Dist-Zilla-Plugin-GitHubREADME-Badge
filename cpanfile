@@ -1,3 +1,4 @@
+requires 'perl', '5.0014';
 requires 'Dist::Zilla';
 requires 'Path::Tiny';
 
