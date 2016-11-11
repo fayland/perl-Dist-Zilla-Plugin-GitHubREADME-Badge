@@ -8,7 +8,6 @@ perl:
     - "5.14"
 before_install:
     - "cpanm Dist::Zilla"
-    - "cpanm Test::More"
     - "cpanm Devel::Cover::Report::Coveralls"
     - "cpanm Devel::Cover::Report::Codecov"
 install:
