@@ -38,6 +38,7 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla" : "0",
+            "Dist::Zilla::Plugin::MetaProvides::Package" : "0",
             "Moose" : "0",
             "Moose::Util::TypeConstraints" : "0",
             "Path::Tiny" : "0",
@@ -51,6 +52,12 @@
             "Test::Pod" : "0",
             "warnings" : "0"
          }
+      }
+   },
+   "provides" : {
+      "Dist::Zilla::Plugin::GitHubREADME::Badge" : {
+         "file" : "lib/Dist/Zilla/Plugin/GitHubREADME/Badge.pm",
+         "version" : "0.20"
       }
    },
    "release_status" : "stable",
