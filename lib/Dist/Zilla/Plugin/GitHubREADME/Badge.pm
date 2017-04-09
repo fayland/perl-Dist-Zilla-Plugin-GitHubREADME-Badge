@@ -68,6 +68,8 @@ sub add_badges {
     foreach my $badge (@{$self->badges}) {
         if ($badge eq 'travis') {
             push @badges, "[![Build Status](https://travis-ci.org/$user_name/$repository_name.svg?branch=master)](https://travis-ci.org/$user_name/$repository_name)";
+        } elsif ($badge eq 'appveyor') {
+            push @badges, "[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/$user_name/$repository_name?branch=master&svg=true)](https://ci.appveyor.com/project/$user_name/$repository_name)";
         } elsif ($badge eq 'coveralls') {
             push @badges, "[![Coverage Status](https://coveralls.io/repos/$user_name/$repository_name/badge.svg?branch=master)](https://coveralls.io/r/$user_name/$repository_name?branch=master)"
         } elsif ($badge eq 'gitter') {
@@ -117,6 +119,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     # configure it yourself
     [GitHubREADME::Badge]
     badges = travis
+    badges = appveyor
     badges = coveralls
     badges = gitter
     badges = cpants
