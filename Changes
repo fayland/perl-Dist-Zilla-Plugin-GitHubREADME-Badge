@@ -2,6 +2,9 @@ Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
 
+0.22  2017-04-10 08:26:03 CST
+        - no code changes, release
+
 0.21  2017-04-10 08:22:37 CST
         - support AppVeyor badge (stphnlyd)
 
