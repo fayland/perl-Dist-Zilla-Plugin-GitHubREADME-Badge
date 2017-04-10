@@ -21,6 +21,7 @@ sub badge_patterns {
   my $ur = qr{\Q$user/$repo\E};
   return {
     travis       => qr{//travis-ci.org/$ur\.},
+    appveyor     => qr{//ci\.appveyor\.com/api/projects/status/github/$ur\.},
     coveralls    => qr{//coveralls.io/repos/$ur/badge\.},
     gitter       => qr{//gitter\.im/$ur\b},
     cpants       => qr{//cpants.cpanauthors.org/dist/\Q$repo\E\.},
