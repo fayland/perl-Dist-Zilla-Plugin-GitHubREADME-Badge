@@ -20,6 +20,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     # configure it yourself
     [GitHubREADME::Badge]
     badges = travis
+    badges = appveyor
     badges = coveralls
     badges = gitter
     badges = cpants
