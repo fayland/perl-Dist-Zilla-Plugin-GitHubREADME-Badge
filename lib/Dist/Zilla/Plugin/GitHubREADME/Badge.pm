@@ -116,6 +116,10 @@ sub add_badges {
             push @badges, "[![build status](https://$base_url/$user_name/$repository_name/badges/master/build.svg)]($repository/$user_name/$repository_name/commits/master)";
         } elsif ($badge eq 'gitlab_cover') {
             push @badges, "[![coverage report](https://$base_url/$user_name/$repository_name/badges/master/coverage.svg)]($repository/$user_name/$repository_name/commits/master)";
+        } elsif ($badge eq 'docker_automated') {
+            push @badges, "[![Docker Automated Build](https://img.shields.io/docker/automated/$user_name/$repository_name.svg)](https://github.com/$user_name/$repository_name)";
+        } elsif ($badge eq 'docker_build') {
+            push @badges, "[![Docker Build Status](https://img.shields.io/docker/build/$user_name/$repository_name.svg)](https://hub.docker.com/r/$user_name/$repository_name/)";
         }
     }
 
@@ -165,6 +169,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = codecov
     badges = gitlab_ci
     badges = gitlab_cover
+    badges = docker_automated
+    badges = docker_build
     place = bottom
     phase = release
 
