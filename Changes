@@ -2,6 +2,9 @@ Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
 
+0.24  2018-04-04 08:05:10 CST
+        - Added support for Docker automated and build badges (powerman)
+
 0.23  2018-02-18 10:19:37 CST
         - add a filemunge phase (yanick)
 

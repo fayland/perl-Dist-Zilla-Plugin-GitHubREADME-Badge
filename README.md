@@ -31,6 +31,8 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = codecov
     badges = gitlab_ci
     badges = gitlab_cover
+    badges = docker_automated
+    badges = docker_build
     place = bottom
     phase = release
 
