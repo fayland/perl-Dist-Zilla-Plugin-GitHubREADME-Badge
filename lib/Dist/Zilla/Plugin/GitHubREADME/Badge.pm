@@ -117,7 +117,7 @@ sub add_badges {
         } elsif ($badge eq 'gitlab_cover') {
             push @badges, "[![coverage report](https://$base_url/$user_name/$repository_name/badges/master/coverage.svg)]($repository/$user_name/$repository_name/commits/master)";
         } elsif ($badge eq 'docker_automated') {
-            push @badges, "[![Docker Automated Build](https://img.shields.io/docker/automated/\L$user_name/$repository_name\E.svg)](https://github.com/\L$user_name/$repository_name\E)";
+            push @badges, "[![Docker Automated Build](https://img.shields.io/docker/automated/\L$user_name/$repository_name\E.svg)](https://github.com/$user_name/$repository_name)";
         } elsif ($badge eq 'docker_build') {
             push @badges, "[![Docker Build Status](https://img.shields.io/docker/build/\L$user_name/$repository_name\E.svg)](https://hub.docker.com/r/\L$user_name/$repository_name\E/)";
         }
