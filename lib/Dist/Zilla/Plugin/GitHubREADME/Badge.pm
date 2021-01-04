@@ -104,7 +104,7 @@ sub add_badges {
         } elsif ($badge eq 'gitter') {
             push @badges, "[![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/$user_name/$repository_name)";
         } elsif ($badge eq 'cpants') {
-            push @badges, "[![Kwalitee status](http://cpants.cpanauthors.org/dist/$distname.png)](https://cpants.cpanauthors.org/dist/$distname)";
+            push @badges, "[![Kwalitee status](https://cpants.cpanauthors.org/dist/$distname.png)](https://cpants.cpanauthors.org/dist/$distname)";
         } elsif ($badge eq 'issues') {
             push @badges, "[![GitHub issues](https://img.shields.io/github/issues/$user_name/$repository_name.svg)](https://github.com/$user_name/$repository_name/issues)";
         } elsif ($badge eq 'github_tag') {
