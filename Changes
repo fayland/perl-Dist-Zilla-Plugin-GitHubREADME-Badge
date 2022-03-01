@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-GitHubREADME-Badge
 
 {{$NEXT}}
+        - add 'branch' in config
 
 0.33  2021-01-04 08:39:08 CST
         - cpants minor fix: The link to the image should be https (reneeb)
