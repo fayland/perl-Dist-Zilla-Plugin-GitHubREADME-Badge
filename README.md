@@ -2,11 +2,12 @@
 [![Coverage Status](https://coveralls.io/repos/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/badge.svg?branch=master)](https://coveralls.io/r/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge?branch=master)
 [![codecov](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/branch/master/graph/badge.svg)](https://codecov.io/gh/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge)
-[![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-Plugin-GitHubREADME-Badge)
+[![Kwalitee status](https://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge.png)](https://cpants.cpanauthors.org/dist/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![GitHub issues](https://img.shields.io/github/issues/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://github.com/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge/issues)
 [![GitHub tag](https://img.shields.io/github/tag/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
 [![Cpan license](https://img.shields.io/cpan/l/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Cpan version](https://img.shields.io/cpan/v/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
+[![CPAN Cover Status](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.34)](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.34)
 
 # NAME
 
@@ -38,6 +39,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = cpancover
     place = bottom
     phase = release
+    branch = main
 
 # DESCRIPTION
 
@@ -57,6 +59,13 @@ The default goes to travis, coveralls and cpants.
     badges = coveralls
     badges = gitter
     badges = cpants
+
+## branch
+
+    [GitHubREADME::Badge]
+    branch = main
+
+defaults to 'master'. you need set to 'main' for new github repos
 
 ## place
 
@@ -79,7 +88,7 @@ The default is `build`.
 
 # SEE ALSO
 
-[Minilla](https://metacpan.org/pod/Minilla), [Dist::Zilla::Plugin::TravisCI::StatusBadge](https://metacpan.org/pod/Dist::Zilla::Plugin::TravisCI::StatusBadge)
+[Minilla](https://metacpan.org/pod/Minilla), [Dist::Zilla::Plugin::TravisCI::StatusBadge](https://metacpan.org/pod/Dist%3A%3AZilla%3A%3APlugin%3A%3ATravisCI%3A%3AStatusBadge)
 
 # AUTHOR
 
