@@ -7,7 +7,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/fayland/perl-Dist-Zilla-Plugin-GitHubREADME-Badge.svg)]()
 [![Cpan license](https://img.shields.io/cpan/l/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
 [![Cpan version](https://img.shields.io/cpan/v/Dist-Zilla-Plugin-GitHubREADME-Badge.svg)](https://metacpan.org/release/Dist-Zilla-Plugin-GitHubREADME-Badge)
-[![CPAN Cover Status](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.34)](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.34)
+[![CPAN Cover Status](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.35)](https://cpancoverbadge.perl-services.de/Dist-Zilla-Plugin-GitHubREADME-Badge-0.35)
 
 # NAME
 
@@ -35,7 +35,7 @@ Dist::Zilla::Plugin::GitHubREADME::Badge - Dist::Zilla - add badges to github RE
     badges = gitlab_cover
     badges = docker_automated
     badges = docker_build
-    badges = github_actions/test
+    badges = github_actions/test.yml
     badges = cpancover
     place = bottom
     phase = release
